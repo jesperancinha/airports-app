@@ -22,6 +22,7 @@
         <junit.version>4.12</junit.version>
         <spring.version>4.3.2.RELEASE</spring.version>
         <jdk.version>1.8</jdk.version>
+        <commons-csv.version>1.4</commons-csv.version>
     </properties>
 
     <dependencies>
@@ -90,6 +91,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+
+        <!-- Apache Commons CSV -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>${commons-csv.version}</version>
         </dependency>
 
         <!-- Testing -->

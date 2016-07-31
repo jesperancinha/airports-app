@@ -7,7 +7,15 @@ import java.io.IOException;
  */
 public class ReportService {
 
-    public ReportProvider getReportProvider() throws IOException {
-        return ReportProvider.builder().name("getReportProvider").build();
+    public ReportProvider getMostReportProvider() throws IOException {
+        return ReportProvider.builder().name("getMostReportProvider").build();
+    }
+
+    public ReportProvider getLeastReportProvider() throws IOException {
+        return ReportProvider.builder().name("getLeastReportProvider").build();
+    }
+
+    public ReportProvider getMostRunwayProvider() throws IOException {
+        return ReportProvider.builder().name("getMostRunwayProvider").build();
     }
 }
