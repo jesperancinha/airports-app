@@ -1,0 +1,29 @@
+{
+  "name": "random-repo",
+  "version": "1.0.0",
+  "description": "This is an airport management application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaofse/random-repo.git"
+  },
+  "author": "Joao Esperancinha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaofse/random-repo/issues"
+  },
+  "homepage": "https://github.com/joaofse/random-repo#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "jquery": "^3.1.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-package-modules": "^0.1.3"
+  }
+}

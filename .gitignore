@@ -19,5 +19,7 @@ airports.iml
 target
 .mvn
 mvnw.cmd
+node_modules
+src/main/webapp/node_modules
 
 
