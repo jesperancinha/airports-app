@@ -29,14 +29,17 @@ public class ReportRestRouteBuilder extends RouteBuilder {
         restConfiguration().component("servlet").bindingMode(RestBindingMode.json)
                 .dataFormatProperty("prettyPrint", "true")
                 .contextPath("jesperancinha-airports/rest").port(8080);
+
         rest("/provider").description("ReportProvider rest service")
                 .consumes("application/json").produces("application/json")
                 .get("/tenmostcountriesreport").description("Find atm by city").outType(ReportProvider.class)
                 .to("bean:reportService?method=getMostReportProvider()");
+
         rest("/provider").description("ReportProvider rest service")
                 .consumes("application/json").produces("application/json")
                 .get("/tenleastcountriesreport").description("Find atm by city").outType(ReportProvider.class)
                 .to("bean:reportService?method=getLeastReportProvider()");
+
         rest("/provider").description("ReportProvider rest service")
                 .consumes("application/json").produces("application/json")
                 .get("/tenmostrunwaysreport").description("Find atm by city").outType(ReportProvider.class)
