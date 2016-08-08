@@ -30,17 +30,17 @@ public class ReportRestRouteBuilder extends RouteBuilder {
                 .dataFormatProperty("prettyPrint", "true")
                 .contextPath("jesperancinha-airports/rest").port(8080);
 
-        rest("/provider").description("ReportProvider rest service")
+        rest("/provider").description("ReportProvider rest service for Countries")
                 .consumes("application/json").produces("application/json")
                 .get("/tenmostcountriesreport").description("Find atm by city").outType(ReportProvider.class)
                 .to("bean:reportService?method=getMostReportProvider()");
 
-        rest("/provider").description("ReportProvider rest service")
+        rest("/provider").description("ReportProvider rest service for Countries")
                 .consumes("application/json").produces("application/json")
                 .get("/tenleastcountriesreport").description("Find atm by city").outType(ReportProvider.class)
                 .to("bean:reportService?method=getLeastReportProvider()");
 
-        rest("/provider").description("ReportProvider rest service")
+        rest("/provider").description("ReportProvider rest service for Runaways")
                 .consumes("application/json").produces("application/json")
                 .get("/tenmostrunwaysreport").description("Find atm by city").outType(ReportProvider.class)
                 .to("bean:reportService?method=getMostRunwayProvider()");

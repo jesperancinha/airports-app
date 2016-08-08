@@ -1,41 +1,59 @@
 package com.jesperancinha.service.containers;
 
+import com.fasterxml.jackson.databind.MappingIterator;
+import com.fasterxml.jackson.dataformat.csv.CsvMapper;
+import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.jesperancinha.service.pojos.Runway;
 import lombok.Getter;
+import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by joaofilipesabinoesperancinha on 01-08-16.
  */
 @Getter
+@Component
 public class RunwayContainer {
 
-    private Object[] FILE_HEADER = new Object[]
-            {
-                    "id",
-                    "airport_ref",
-                    "airport_ident",
-                    "length_ft",
-                    "width_ft",
-                    "surface",
-                    "lighted",
-                    "closed",
-                    "le_ident",
-                    "le_latitude_deg",
-                    "le_longitude_deg",
-                    "le_elevation_ft",
-                    "le_heading_degT",
-                    "le_displaced_threshold_ft",
-                    "he_ident",
-                    "he_latitude_deg",
-                    "he_longitude_deg",
-                    "he_elevation_ft",
-                    "he_heading_degT",
-                    "he_displaced_threshold_ft"
-            };
+    private final CsvMapper mapper = new CsvMapper();
+    private final CsvSchema schema = CsvSchema.builder()
+            .addColumn("id")
+            .addColumn("airportRef")
+            .addColumn("airportIdent")
+            .addColumn("lengthFt")
+            .addColumn("widthFt")
+            .addColumn("surface")
+            .addColumn("lighted")
+            .addColumn("closed")
+            .addColumn("leIdent")
+            .addColumn("leLatitudeDeg")
+            .addColumn("leLongitudeDeg")
+            .addColumn("leElevationFt")
+            .addColumn("leHeadingDegT")
+            .addColumn("leDisplacedThresholdFt")
+            .addColumn("heIdent")
+            .addColumn("heLatitudeDeg")
+            .addColumn("heLongitudeDeg")
+            .addColumn("heElevationFt")
+            .addColumn("heHeadingDegT")
+            .addColumn("heDisplacedThresholdFt")
+            .build();
 
-    private Runway runway;
 
-    public RunwayContainer() {
+    private List<Runway> runways;
 
+    public RunwayContainer() throws IOException {
+        runways = new ArrayList<>();
+        final InputStream aiportStream = getClass().getResourceAsStream("/runways.csv");
+        final MappingIterator<Runway> it = mapper
+                .reader(Runway.class)
+                .with(schema)
+                .readValues(new InputStreamReader(aiportStream));
+        runways = it.readAll();
     }
 }

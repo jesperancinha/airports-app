@@ -12,11 +12,12 @@
         http://camel.apache.org/schema/spring
         http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-    <context:component-scan base-package="com.jesperancinha.service"/>
+    <context:component-scan base-package="com.jesperancinha.service.configuration"/>
 
     <mvc:annotation-driven/>
 
     <camelContext id="providerCamelContext" xmlns="http://camel.apache.org/schema/spring" trace="true">
+        <contextScan/>
     </camelContext>
 
     <bean id="viewResolver"

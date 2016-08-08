@@ -16,13 +16,16 @@
  */
 package com.jesperancinha.service.resources.query;
 
+import com.jesperancinha.service.pojos.Airport;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
 @Builder
 public class QueryProvider {
-    private final String name;
+    private List<Airport> airportList;
 }

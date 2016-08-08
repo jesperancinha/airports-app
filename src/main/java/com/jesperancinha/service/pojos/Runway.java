@@ -22,6 +22,8 @@ public class Runway {
 
     private String widthFt;
 
+    private String surface;
+
     private String lighted;
 
     private String closed;
@@ -30,11 +32,11 @@ public class Runway {
 
     private String leLatitudeDeg;
 
-    private String letLongitudeDeg;
+    private String leLongitudeDeg;
 
     private String leElevationFt;
 
-    private String leLeadingDegT;
+    private String leHeadingDegT;
 
     private String leDisplacedThresholdFt;
 
@@ -47,6 +49,8 @@ public class Runway {
     private String heElevationFt;
 
     private String heHeadingDegT;
+
+    private String heDisplacedThresholdFt;
 
     private String heDisplacedThresholdFT;
 

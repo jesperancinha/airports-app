@@ -24,7 +24,7 @@ public class Airport {
 
     private String longitudeDeg;
 
-    private String elevation_ft;
+    private String elevationFt;
 
     private String continent;
 
@@ -47,5 +47,7 @@ public class Airport {
     private String wikipediaLink;
 
     private String keywords;
+
+    private Country country;
 
 }
