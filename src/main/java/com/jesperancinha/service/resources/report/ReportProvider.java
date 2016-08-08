@@ -20,9 +20,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Map;
+
 @Getter
 @Setter
 @Builder
 public class ReportProvider {
-    private final String name;
+   private Map<String, Long> listOfResults;
 }
