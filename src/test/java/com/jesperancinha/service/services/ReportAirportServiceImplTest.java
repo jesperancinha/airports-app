@@ -31,7 +31,6 @@ public class ReportAirportServiceImplTest {
     @Test
     public void getCountriesWithHighestNumberOfAirports() throws Exception {
         Map<String, Long> topTen = reportAirportService.getCountriesWithHighestNumberOfAirports(10);
-
     }
 
     @Test

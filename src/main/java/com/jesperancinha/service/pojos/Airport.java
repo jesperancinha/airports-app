@@ -1,15 +1,16 @@
 package com.jesperancinha.service.pojos;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by joaofilipesabinoesperancinha on 01-08-16.
  */
 @Getter
 @Setter
-@NoArgsConstructor
 public class Airport {
 
     private String id;
@@ -50,4 +51,13 @@ public class Airport {
 
     private Country country;
 
+    private List<Runway> runways;
+
+    public Airport() {
+        runways = new ArrayList<>();
+    }
+
+    public void addRunWay(Runway runway) {
+        runways.add(runway);
+    }
 }

@@ -2,12 +2,9 @@ package com.jesperancinha.service.resources.report;
 
 import com.jesperancinha.service.services.ReportAirportService;
 import org.apache.camel.BeanInject;
-import org.apache.camel.impl.SimpleRegistry;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import java.io.IOException;
 
 /**
@@ -29,7 +26,7 @@ public class ReportService {
     }
 
     public ReportProvider getLeastReportProvider() throws IOException {
-        return  ReportProvider
+        return ReportProvider
                 .builder()
                 .listOfResults(reportAirportService.getCountriesWithLowesNumberOfAirports(10))
                 .build();
@@ -39,11 +36,4 @@ public class ReportService {
         return null;
     }
 
-    @Autowired
-    SimpleRegistry registry;
-
-    @PostConstruct
-    public void init() {
-        registry.put("reportService", this);
-    }
 }

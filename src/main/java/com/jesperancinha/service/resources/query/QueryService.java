@@ -2,12 +2,9 @@ package com.jesperancinha.service.resources.query;
 
 import com.jesperancinha.service.services.QueryAirportService;
 import org.apache.camel.BeanInject;
-import org.apache.camel.impl.SimpleRegistry;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import java.io.IOException;
 
 /**
@@ -32,13 +29,5 @@ public class QueryService {
                 .builder()
                 .airportList(queryAirportService.getAirportsByCountryCode(countryCode))
                 .build();
-    }
-
-    @Autowired
-    SimpleRegistry registry;
-
-    @PostConstruct
-    public void init(){
-        registry.put("queryService", this);
     }
 }

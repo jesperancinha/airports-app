@@ -4,12 +4,9 @@ import com.jesperancinha.service.containers.MainContainerService;
 import com.jesperancinha.service.pojos.Airport;
 import com.jesperancinha.service.pojos.Runway;
 import org.apache.camel.BeanInject;
-import org.apache.camel.impl.SimpleRegistry;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,29 +15,17 @@ import java.util.stream.Collectors;
 /**
  * Created by joaofilipesabinoesperancinha on 01-08-16.
  */
+
 @Component
 @Service(value = "reportAirportService")
 public class ReportAirportServiceImpl implements ReportAirportService {
 
-    @Autowired
-    MainContainerService mainContainerServiceFromSpring;
-
     @BeanInject
-    MainContainerService mainContainerServiceFromCamel;
-
-    @Autowired
-    SimpleRegistry registry;
-
-    @Autowired
-    @PostConstruct
-    public void init() {
-        registry.put("mainContainerService", mainContainerServiceFromSpring);
-        registry.put("reportService", this);
-    }
+    MainContainerService mainContainerService;
 
     @Override
     public Map<String, Long> getCountriesWithHighestNumberOfAirports(int listSize) {
-        List<Airport> listOfAirports = mainContainerServiceFromCamel.getFullAiportInfo();
+        List<Airport> listOfAirports = mainContainerService.getFullAiportInfo();
         Map<String, Long> topTen = listOfAirports
                 .stream()
                 .sorted((o1, o2) -> o1.getIsoCountry().compareTo(o2.getIsoCountry()))
@@ -56,7 +41,7 @@ public class ReportAirportServiceImpl implements ReportAirportService {
 
     @Override
     public Map<String, Long> getCountriesWithLowesNumberOfAirports(int listSize) {
-        List<Airport> listOfAirports = mainContainerServiceFromCamel.getFullAiportInfo();
+        List<Airport> listOfAirports = mainContainerService.getFullAiportInfo();
         Map<String, Long> topLowest = listOfAirports
                 .stream()
                 .sorted((o1, o2) -> o1.getIsoCountry().compareTo(o2.getIsoCountry()))
