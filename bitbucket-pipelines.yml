@@ -3,7 +3,7 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: jesperancinha/java-exercise-docker:0.0.4
+image: jesperancinha/java-exercise-docker:0.0.3
 
 pipelines:
   default:
@@ -11,5 +11,5 @@ pipelines:
         caches:
           - maven
         script: # Modify the commands below to build your repository.
-          #- mvn -B verify # -B batch mode makes Maven less verbose
-          - java --version
+          - mvn -B verify # -B batch mode makes Maven less verbose
+
