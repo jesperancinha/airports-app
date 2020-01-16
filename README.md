@@ -1,4 +1,4 @@
-# random-repo
+# our airports app
 
 Airports data from http://ourairports.com/data/ (released under public domain)
 

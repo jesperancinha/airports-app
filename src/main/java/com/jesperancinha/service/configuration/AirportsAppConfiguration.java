@@ -8,12 +8,12 @@ import com.jesperancinha.service.services.ReportAirportService;
 import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.camel.impl.SimpleRegistry;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import javax.annotation.PostConstruct;
 
 /**
  * Created by joaofilipesabinoesperancinha on 31-07-16.
@@ -25,7 +25,7 @@ import javax.annotation.PostConstruct;
         "com.jesperancinha.service.services",
         "com.jesperancinha.service.resources"
 })
-public class AirportsAppConfiguration {
+public class AirportsAppConfiguration implements InitializingBean {
     private static SimpleRegistry registry = new SimpleRegistry();
 
     @Autowired
@@ -52,10 +52,9 @@ public class AirportsAppConfiguration {
         return camelContext;
     }
 
-    @PostConstruct
-    public void init() {
+    @Override
+    public void afterPropertiesSet() throws Exception {
         registry.put("reportAirportService", reportAirportService);
         registry.put("queryAirportService", queryAirportService);
     }
-
 }

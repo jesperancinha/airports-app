@@ -21,5 +21,6 @@ target
 mvnw.cmd
 node_modules
 src/main/webapp/node_modules
+*.iml
 
 
