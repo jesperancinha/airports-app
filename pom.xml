@@ -12,9 +12,6 @@
     <description>Airports Search and Report</description>
 
     <properties>
-        <maven.compiler.source>12</maven.compiler.source>
-        <maven.compiler.target>12</maven.compiler.target>
-        <java.version>12</java.version>
         <maven.compiler.plugin>2.3.2</maven.compiler.plugin>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
