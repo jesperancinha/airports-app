@@ -12,7 +12,9 @@
     <description>Airports Search and Report</description>
 
     <properties>
-        <maven.compiler.plugin>2.3.2</maven.compiler.plugin>
+        <maven.compiler.source>12</maven.compiler.source>
+        <maven.compiler.target>12</maven.compiler.target>
+        <java.version>12</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <camel.version>2.15.2</camel.version>
@@ -27,6 +29,7 @@
         <lombok.version>1.18.10</lombok.version>
         <jakarta.xml.bind-api.version>2.3.2</jakarta.xml.bind-api.version>
         <jaxb-runtime.version>2.3.2</jaxb-runtime.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
 
     <dependencies>
@@ -153,6 +156,15 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
