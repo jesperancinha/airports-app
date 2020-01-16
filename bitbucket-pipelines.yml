@@ -11,4 +11,6 @@ pipelines:
         caches:
           - maven
         script: # Modify the commands below to build your repository.
+          - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+          - apt install nodejs
           - mvn -B verify # -B batch mode makes Maven less verbose
