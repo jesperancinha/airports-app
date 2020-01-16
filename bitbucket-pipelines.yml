@@ -11,9 +11,4 @@ pipelines:
         caches:
           - maven
         script: # Modify the commands below to build your repository.
-          - pacman -S wget
-          - wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.0.1ubuntu2.17_amd64.deb -O apt.deb
-          - sudo dpkg -i apt.deb
-          - curl -sL https://deb.nodesource.com/setup_10.x | bash -
-          - apt install nodejs
           - mvn -B verify # -B batch mode makes Maven less verbose
