@@ -2,7 +2,7 @@
 
 Airports data from http://ourairports.com/data/ (released under public domain)
 
-## Usage examples:
+## Usage examples
 
 * http://localhost:8080/airports/rest/provider/${countryname}/airports/countryname
 
