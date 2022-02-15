@@ -1,4 +1,4 @@
-# our airports app
+# Airports App
 
 Airports data from [http://ourairports.com/data/](http://ourairports.com/data/) (released under public domain)
 

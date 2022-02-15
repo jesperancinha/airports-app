@@ -13,6 +13,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "build.maven" }}
             - v1-dependencies-
+      - run: sudo apt install npm
       - run: make build
       - run: mvn clean install jacoco:prepare-agent package jacoco:report
 
@@ -29,6 +30,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "build.gradle" }}
             - v1-dependencies-
+      - run: sudo apt install npm
       - run: mvn clean install jacoco:prepare-agent package jacoco:report
       - run: mvn omni-coveragereporter:report
 
