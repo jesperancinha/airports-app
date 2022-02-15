@@ -7,6 +7,7 @@
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 
 [![CircleCI](https://circleci.com/bb/jesperancinha/airports-app/tree/master.svg?style=svg)](https://circleci.com/bb/jesperancinha/airports-app/tree/master)
+[![Bitbucket Pipelines branch](https://img.shields.io/bitbucket/pipelines/jesperancinha/airports-app/master)](https://bitbucket.org/jesperancinha/airports-app/addon/pipelines/home)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/1ee4811287244931b6e721626f58b460)](https://www.codacy.com/bb/jesperancinha/airports-app/dashboard?utm_source=jesperancinha@bitbucket.org&amp;utm_medium=referral&amp;utm_content=jesperancinha/airports-app&amp;utm_campaign=Badge_Grade)
 
