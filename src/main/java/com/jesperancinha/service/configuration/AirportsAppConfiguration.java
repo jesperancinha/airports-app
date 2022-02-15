@@ -3,17 +3,17 @@ package com.jesperancinha.service.configuration;
 import com.jesperancinha.service.containers.MainContainerService;
 import com.jesperancinha.service.resources.query.QueryRestRouteBuilder;
 import com.jesperancinha.service.resources.report.ReportRestRouteBuilder;
-import com.jesperancinha.service.services.QueryAirportService;
-import com.jesperancinha.service.services.ReportAirportService;
+import org.jesperancinha.service.services.QueryAirportService;
+import org.jesperancinha.service.services.ReportAirportService;
 import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
-import org.apache.camel.impl.SimpleRegistry;
-import org.springframework.beans.factory.DisposableBean;
+import org.apache.camel.support.SimpleRegistry;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.Map;
 
 
 /**
@@ -29,14 +29,20 @@ import org.springframework.context.annotation.Configuration;
 public class AirportsAppConfiguration implements InitializingBean {
     private static SimpleRegistry registry = new SimpleRegistry();
 
-    @Autowired
+    final
     MainContainerService mainContainerService;
 
-    @Autowired
+    final
     ReportAirportService reportAirportService;
 
-    @Autowired
+    final
     QueryAirportService queryAirportService;
+
+    public AirportsAppConfiguration(MainContainerService mainContainerService, ReportAirportService reportAirportService, QueryAirportService queryAirportService) {
+        this.mainContainerService = mainContainerService;
+        this.reportAirportService = reportAirportService;
+        this.queryAirportService = queryAirportService;
+    }
 
     @Bean
     SimpleRegistry registry() {
@@ -49,13 +55,13 @@ public class AirportsAppConfiguration implements InitializingBean {
         camelContext.addRoutes(new QueryRestRouteBuilder());
         camelContext.addRoutes(new ReportRestRouteBuilder());
         camelContext.start();
-        registry.put("mainContainerService", mainContainerService);
+        registry.put("mainContainerService", Map.of(mainContainerService.getClass(), mainContainerService));
         return camelContext;
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        registry.put("reportAirportService", reportAirportService);
-        registry.put("queryAirportService", queryAirportService);
+        registry.put("reportAirportService", Map.of(reportAirportService.getClass(), reportAirportService));
+        registry.put("queryAirportService", Map.of(queryAirportService.getClass(), queryAirportService));
     }
 }

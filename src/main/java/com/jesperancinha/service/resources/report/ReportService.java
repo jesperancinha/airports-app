@@ -1,6 +1,6 @@
 package com.jesperancinha.service.resources.report;
 
-import com.jesperancinha.service.services.ReportAirportService;
+import org.jesperancinha.service.services.ReportAirportService;
 import org.apache.camel.BeanInject;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;

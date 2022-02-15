@@ -1,6 +1,6 @@
 package com.jesperancinha.service.resources.query;
 
-import com.jesperancinha.service.services.QueryAirportService;
+import org.jesperancinha.service.services.QueryAirportService;
 import org.apache.camel.BeanInject;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;

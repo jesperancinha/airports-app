@@ -1,4 +1,4 @@
-package com.jesperancinha.service.services;
+package org.jesperancinha.service.services;
 
 import com.jesperancinha.service.configuration.AirportsAppConfiguration;
 import com.jesperancinha.service.pojos.Airport;

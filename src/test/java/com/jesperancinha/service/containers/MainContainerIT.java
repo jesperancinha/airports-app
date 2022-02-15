@@ -4,7 +4,7 @@ import com.jesperancinha.service.configuration.AirportsAppConfiguration;
 import com.jesperancinha.service.pojos.Airport;
 import com.jesperancinha.service.resources.query.QueryRestRouteBuilder;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.language.Bean;
+import org.apache.camel.language.bean.Bean;
 import org.apache.camel.spring.javaconfig.SingleRouteCamelConfiguration;
 import org.apache.camel.test.spring.CamelSpringDelegatingTestContextLoader;
 import org.apache.camel.test.spring.CamelSpringJUnit4ClassRunner;
@@ -37,12 +37,12 @@ import static org.junit.Assert.assertThat;
 public class MainContainerIT {
 
     @Autowired
-    MainContainerServiceImpl mainContainer;
+    MainContainerServiceImpl mainContainerService;
 
     @Test
-    public void getFullAiportInfo() throws Exception {
+    public void getFullAiportInfo() {
 
-        List<Airport> airports = mainContainer.getFullAiportInfo();
+        List<Airport> airports = mainContainerService.getFullAiportInfo();
         Airport airport = airports.get(0);
 
         assertThat(airports, hasSize(46506));

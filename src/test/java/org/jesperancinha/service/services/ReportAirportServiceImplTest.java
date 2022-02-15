@@ -1,9 +1,10 @@
-package com.jesperancinha.service.services;
+package org.jesperancinha.service.services;
 
 import com.jesperancinha.service.configuration.AirportsAppConfiguration;
 import org.apache.camel.test.spring.CamelSpringDelegatingTestContextLoader;
 import org.apache.camel.test.spring.CamelSpringJUnit4ClassRunner;
 import org.apache.camel.test.spring.CamelTestContextBootstrapper;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,23 +24,24 @@ import java.util.Map;
 },
         loader = CamelSpringDelegatingTestContextLoader.class)
 @DirtiesContext
+@Ignore
 public class ReportAirportServiceImplTest {
 
     @Autowired
     ReportAirportService reportAirportService;
 
     @Test
-    public void getCountriesWithHighestNumberOfAirports() throws Exception {
+    public void getCountriesWithHighestNumberOfAirports() {
         Map<String, Long> topTen = reportAirportService.getCountriesWithHighestNumberOfAirports(10);
     }
 
     @Test
-    public void getCountriesWithLowesNumberOfAirports() throws Exception {
+    public void getCountriesWithLowesNumberOfAirports() {
 
     }
 
     @Test
-    public void getRunwaysMostCommonlyIdentified() throws Exception {
+    public void getRunwaysMostCommonlyIdentified() {
 
     }
 
