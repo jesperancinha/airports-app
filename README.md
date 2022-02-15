@@ -8,7 +8,10 @@
 
 [![CircleCI](https://circleci.com/bb/jesperancinha/airports-app/tree/master.svg?style=svg)](https://circleci.com/bb/jesperancinha/airports-app/tree/master)
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1ee4811287244931b6e721626f58b460)](https://www.codacy.com/bb/jesperancinha/airports-app/dashboard?utm_source=jesperancinha@bitbucket.org&amp;utm_medium=referral&amp;utm_content=jesperancinha/airports-app&amp;utm_campaign=Badge_Grade)
+
 [![Coverage Status](https://coveralls.io/repos/bitbucket/jesperancinha/airports-app/badge.svg?branch=master)](https://coveralls.io/bitbucket/jesperancinha/airports-app?branch=master)
+[![codecov](https://codecov.io/bb/jesperancinha/airports-app/branch/master/graph/badge.svg?token=J0OU3P13PO)](https://codecov.io/bb/jesperancinha/airports-app)
 
 ---
 
