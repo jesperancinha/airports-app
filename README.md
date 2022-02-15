@@ -8,6 +8,8 @@
 
 [![CircleCI](https://circleci.com/bb/jesperancinha/airports-app/tree/master.svg?style=svg)](https://circleci.com/bb/jesperancinha/airports-app/tree/master)
 
+[![Coverage Status](https://coveralls.io/repos/bitbucket/jesperancinha/airports-app/badge.svg?branch=master)](https://coveralls.io/bitbucket/jesperancinha/airports-app?branch=master)
+
 ---
 
 ## Introduction
