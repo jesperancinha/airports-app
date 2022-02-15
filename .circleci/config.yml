@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run: sudo apt update
-      - run: sudo apt install npm
+      - run: sudo apt install npm -y
       - run: make build
       - run: mvn clean install jacoco:prepare-agent package jacoco:report
 
@@ -22,7 +22,7 @@ jobs:
     steps:
       - checkout
       - run: sudo apt update
-      - run: sudo apt install npm
+      - run: sudo apt install npm -y
       - run: mvn clean install jacoco:prepare-agent package jacoco:report
       - run: mvn omni-coveragereporter:report
 
