@@ -8,11 +8,6 @@ jobs:
 
     steps:
       - checkout
-
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "build.maven" }}
-            - v1-dependencies-
       - run: sudo apt update
       - run: sudo apt install npm
       - run: make build
@@ -26,11 +21,6 @@ jobs:
 
     steps:
       - checkout
-
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}
-            - v1-dependencies-
       - run: sudo apt update
       - run: sudo apt install npm
       - run: mvn clean install jacoco:prepare-agent package jacoco:report
