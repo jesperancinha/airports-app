@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/joaofse/random-repo#readme",
   "dependencies": {
-    "angular": "^1.5.8",
+    "angular": "^1.8.3",
     "angular-route": "^1.8.3",
     "jquery": "^3.6.1"
   },
