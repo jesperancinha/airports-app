@@ -27,7 +27,7 @@
         <servlet-api.version>2.4</servlet-api.version>
         <lombok.version>1.18.24</lombok.version>
         <jakarta.xml.bind-api.version>2.3.2</jakarta.xml.bind-api.version>
-        <jaxb-runtime.version>2.3.2</jaxb-runtime.version>
+        <jaxb-runtime.version>4.0.1</jaxb-runtime.version>
         <maven-compiler-plugin.version>3.10.0</maven-compiler-plugin.version>
         <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
