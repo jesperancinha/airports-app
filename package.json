@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-clean": "^2.0.1",
     "grunt-package-modules": "^1.0.0"
   }
 }
