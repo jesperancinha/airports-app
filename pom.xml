@@ -17,7 +17,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <camel.version>3.14.6</camel.version>
+        <camel.version>3.14.7</camel.version>
         <junit.version>4.13.2</junit.version>
         <spring.version>6.0.3</spring.version>
         <commons-csv.version>1.4</commons-csv.version>
