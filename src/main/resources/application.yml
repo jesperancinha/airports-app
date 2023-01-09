@@ -1,0 +1,6 @@
+camel:
+  springboot:
+    name: CamelRestJpa
+  servlet:
+    mapping:
+      contextPath: /app/*

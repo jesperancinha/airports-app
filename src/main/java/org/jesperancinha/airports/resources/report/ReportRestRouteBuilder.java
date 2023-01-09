@@ -18,10 +18,12 @@ package org.jesperancinha.airports.resources.report;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
+import org.springframework.stereotype.Component;
 
 /**
  *
  */
+@Component
 public class ReportRestRouteBuilder extends RouteBuilder {
 
     @Override

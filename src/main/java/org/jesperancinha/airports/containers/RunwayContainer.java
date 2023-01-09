@@ -3,8 +3,8 @@ package org.jesperancinha.airports.containers;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
-import org.jesperancinha.airports.pojos.Runway;
 import lombok.Getter;
+import org.jesperancinha.airports.pojos.Runway;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;

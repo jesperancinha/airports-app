@@ -1,7 +1,7 @@
 package org.jesperancinha.airports.services;
 
 import org.apache.camel.BeanInject;
-import org.jesperancinha.airports.containers.MainContainerServiceImpl;
+import org.jesperancinha.airports.containers.MainContainerService;
 import org.jesperancinha.airports.pojos.Airport;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class QueryAirportService {
 
     @BeanInject
-    MainContainerServiceImpl mainContainerService;
+    MainContainerService mainContainerService;
 
     public List<Airport> getAirportsByCountryName(String countryName) {
         return mainContainerService.getFullAiportInfo()

@@ -1,11 +1,10 @@
 package org.jesperancinha.airports.containers;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.jesperancinha.airports.pojos.Airport;
 import org.jesperancinha.airports.pojos.Country;
 import org.jesperancinha.airports.pojos.Runway;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -18,9 +17,8 @@ import java.util.stream.Collectors;
  */
 @Getter
 @Setter
-@Component
-@Service(value = "mainContainerService")
-public class MainContainerServiceImpl {
+@Service
+public class MainContainerService {
 
     private AirportContainer airportContainer = new AirportContainer();
 
@@ -30,7 +28,7 @@ public class MainContainerServiceImpl {
 
     private List<Airport> fullAiportInfo;
 
-    public MainContainerServiceImpl() throws IOException {
+    public MainContainerService() throws IOException {
         List<Airport> airports = airportContainer.getAirports();
         List<Country> countries = countryContainer.getCountries();
         List<Runway> runways = runwayContainer.getRunways();

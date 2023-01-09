@@ -1,18 +1,12 @@
 package org.jesperancinha.airports.containers;
 
-import org.apache.camel.spring.javaconfig.SingleRouteCamelConfiguration;
-import org.jesperancinha.airports.configuration.AirportsAppConfiguration;
-import org.jesperancinha.airports.pojos.Airport;
-import org.jesperancinha.airports.resources.query.QueryRestRouteBuilder;
-import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.language.bean.Bean;
 import org.apache.camel.test.spring.CamelSpringDelegatingTestContextLoader;
 import org.apache.camel.test.spring.CamelSpringJUnit4ClassRunner;
 import org.apache.camel.test.spring.CamelTestContextBootstrapper;
+import org.jesperancinha.airports.pojos.Airport;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.BootstrapWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -29,15 +23,14 @@ import static org.junit.Assert.assertThat;
 @RunWith(CamelSpringJUnit4ClassRunner.class)
 @BootstrapWith(CamelTestContextBootstrapper.class)
 @ContextConfiguration(classes = {
-        AirportsAppConfiguration.class,
-        MainContainerServiceImpl.class
+        MainContainerService.class
 },
         loader = CamelSpringDelegatingTestContextLoader.class)
 @DirtiesContext
 public class MainContainerIT {
 
     @Autowired
-    MainContainerServiceImpl mainContainerService;
+    MainContainerService mainContainerService;
 
     @Test
     public void getFullAiportInfo() {
@@ -50,13 +43,13 @@ public class MainContainerIT {
         assertThat(airport.getCountry(), notNullValue());
     }
 
-    @Configuration
-    public static class ContextConfig extends SingleRouteCamelConfiguration {
-
-        @Bean(ref = "")
-        @Override
-        public RouteBuilder route() {
-            return new QueryRestRouteBuilder();
-        }
-    }
+//    @Configuration
+//    public static class ContextConfig extends SingleRouteCamelConfiguration {
+//
+//        @Bean(ref = "")
+//        @Override
+//        public RouteBuilder route() {
+//            return new QueryRestRouteBuilder();
+//        }
+//    }
 }

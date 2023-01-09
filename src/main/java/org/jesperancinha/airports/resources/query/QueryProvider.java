@@ -16,10 +16,10 @@
  */
 package org.jesperancinha.airports.resources.query;
 
-import org.jesperancinha.airports.pojos.Airport;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.jesperancinha.airports.pojos.Airport;
 
 import java.util.List;
 
