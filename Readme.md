@@ -26,6 +26,10 @@
 
 Airports data from [http://ourairports.com/data/](http://ourairports.com/data/) (released under public domain)
 
+#### Stable releases
+
+-   [1.0.0](https://github.com/jesperancinha/airports-app/tree/1.0.0) - [0f02871a3e3a981ee56cd20ddbc147ae7f3b5496](https://github.com/jesperancinha/airports-app/tree/1.0.0) - Last WAR version Java JDK17
+
 ## Usage examples
 
 * http://localhost:8080/airports/rest/provider/${countryname}/airports/countryname
