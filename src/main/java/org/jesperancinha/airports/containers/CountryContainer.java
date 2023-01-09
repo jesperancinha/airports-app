@@ -33,11 +33,11 @@ public class CountryContainer {
 
     public CountryContainer() throws IOException {
         countries = new ArrayList<>();
-        final InputStream aiportStream = getClass().getResourceAsStream("/countries.csv");
+        final InputStream airportStream = getClass().getResourceAsStream("/countries.csv");
         final MappingIterator<Country> it = mapper
                 .reader(Country.class)
                 .with(schema)
-                .readValues(new InputStreamReader(aiportStream));
+                .readValues(new InputStreamReader(airportStream));
         countries = it.readAll();
     }
 }
