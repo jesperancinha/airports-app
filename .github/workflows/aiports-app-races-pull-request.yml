@@ -1,4 +1,4 @@
-name: Build on PR
+name: AAC Build on PR
 
 on:
   pull_request:
