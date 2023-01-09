@@ -24,7 +24,10 @@
 
 ## Introduction
 
-Airports data from [http://ourairports.com/data/](http://ourairports.com/data/) (released under public domain)
+This is just a project to test-drive the Apache Camel framework using airport data from the public domain.
+
+The source data is available in the public domain on
+- [http://ourairports.com/data/](http://ourairports.com/data/)
 
 #### Stable releases
 
