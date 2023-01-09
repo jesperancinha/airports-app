@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 @Setter
 @Component
 @Service(value = "mainContainerService")
-public class MainContainerServiceImpl implements MainContainerService {
+public class MainContainerServiceImpl {
 
     private AirportContainer airportContainer = new AirportContainer();
 

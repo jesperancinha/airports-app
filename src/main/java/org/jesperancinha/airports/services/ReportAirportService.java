@@ -1,6 +1,6 @@
 package org.jesperancinha.airports.services;
 
-import org.jesperancinha.airports.containers.MainContainerService;
+import org.jesperancinha.airports.containers.MainContainerServiceImpl;
 import org.jesperancinha.airports.pojos.Airport;
 import org.jesperancinha.airports.pojos.Runway;
 import org.apache.camel.BeanInject;
@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 public class ReportAirportService {
 
     @BeanInject
-    MainContainerService mainContainerService;
+    MainContainerServiceImpl mainContainerService;
 
     public Map<String, Long> getCountriesWithHighestNumberOfAirports(int listSize) {
         List<Airport> listOfAirports = mainContainerService.getFullAiportInfo();

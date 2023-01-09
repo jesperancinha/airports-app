@@ -1,6 +1,6 @@
 package org.jesperancinha.airports.configuration;
 
-import org.jesperancinha.airports.containers.MainContainerService;
+import org.jesperancinha.airports.containers.MainContainerServiceImpl;
 import org.jesperancinha.airports.resources.query.QueryRestRouteBuilder;
 import org.jesperancinha.airports.resources.report.ReportRestRouteBuilder;
 import org.jesperancinha.airports.services.QueryAirportService;
@@ -30,7 +30,7 @@ public class AirportsAppConfiguration implements InitializingBean {
     private static SimpleRegistry registry = new SimpleRegistry();
 
     final
-    MainContainerService mainContainerService;
+    MainContainerServiceImpl mainContainerService;
 
     final
     ReportAirportService reportAirportService;
@@ -38,7 +38,7 @@ public class AirportsAppConfiguration implements InitializingBean {
     final
     QueryAirportService queryAirportService;
 
-    public AirportsAppConfiguration(MainContainerService mainContainerService, ReportAirportService reportAirportService, QueryAirportService queryAirportService) {
+    public AirportsAppConfiguration(MainContainerServiceImpl mainContainerService, ReportAirportService reportAirportService, QueryAirportService queryAirportService) {
         this.mainContainerService = mainContainerService;
         this.reportAirportService = reportAirportService;
         this.queryAirportService = queryAirportService;
