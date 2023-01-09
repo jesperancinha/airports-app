@@ -29,6 +29,7 @@ Airports data from [http://ourairports.com/data/](http://ourairports.com/data/) 
 #### Stable releases
 
 -   [1.0.0](https://github.com/jesperancinha/airports-app/tree/1.0.0) - [0f02871a3e3a981ee56cd20ddbc147ae7f3b5496](https://github.com/jesperancinha/airports-app/tree/1.0.0) - Last WAR version Java JDK17
+-   [2.0.0](https://github.com/jesperancinha/airports-app/tree/2.0.0) - [ab0a20eb847d8cb44198cd12352186ff3bf73351](https://github.com/jesperancinha/airports-app/tree/2.0.0) - Spring Boot 2.7.6 with JDK17 and Kotlin 1.8.0
 
 ## Usage examples
 
