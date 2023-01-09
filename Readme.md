@@ -10,7 +10,7 @@
 [![CircleCI](https://circleci.com/bb/jesperancinha/airports-app/tree/master.svg?style=svg)](https://circleci.com/bb/jesperancinha/airports-app/tree/master)
 [![Bitbucket Pipelines branch](https://img.shields.io/bitbucket/pipelines/jesperancinha/airports-app/master)](https://bitbucket.org/jesperancinha/airports-app/addon/pipelines/home)
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1ee4811287244931b6e721626f58b460)](https://www.codacy.com/bb/jesperancinha/airports-app/dashboard?utm_source=jesperancinha@bitbucket.org&amp;utm_medium=referral&amp;utm_content=jesperancinha/airports-app&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0d1a86c060c540b5a64f296b11ad708d)](https://www.codacy.com/gh/jesperancinha/airports-app/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/airports-app&amp;utm_campaign=Badge_Grade)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/1ee4811287244931b6e721626f58b460)](https://www.codacy.com/bb/jesperancinha/airports-app/dashboard?utm_source=jesperancinha@bitbucket.org&utm_medium=referral&utm_content=jesperancinha/airports-app&utm_campaign=Badge_Coverage)
 [![Coverage Status](https://coveralls.io/repos/bitbucket/jesperancinha/airports-app/badge.svg?branch=master)](https://coveralls.io/bitbucket/jesperancinha/airports-app?branch=master)

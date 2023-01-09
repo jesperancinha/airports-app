@@ -18,9 +18,9 @@ jobs:
         - name: Build and Test MAVEN
           run:  mvn clean install jacoco:prepare-agent package jacoco:report
 
-#        - name: Coverage Reports
-#          run: mvn omni-coveragereporter:report
-#          env:
-#             COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-#             CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-#             CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        - name: Coverage Reports
+          run: mvn omni-coveragereporter:report
+          env:
+             COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+             CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+             CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
