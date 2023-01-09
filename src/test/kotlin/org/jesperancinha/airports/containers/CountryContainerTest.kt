@@ -1,20 +1,21 @@
 package org.jesperancinha.airports.containers
 
-import org.hamcrest.Matchers
+import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldNotBeNull
 import org.jesperancinha.airports.pojos.Country
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
 
 /**
  * Created by joaofilipesabinoesperancinha on 08-08-16.
  */
 class CountryContainerTest {
     @Test
-    fun `should run country test container`(){
-            val airportContainer = CountryContainer()
-            val countries: List<Country> = airportContainer.countries
-            val country = countries[0]
-            Assert.assertThat(countries, Matchers.hasSize(248))
-            Assert.assertThat(country.id, Matchers.notNullValue())
-        }
+    fun `should run country test container`() {
+        val airportContainer = CountryContainer()
+        val countries: List<Country> = airportContainer.countries
+        val country = countries[0]
+        countries.shouldHaveSize(248)
+        country.shouldNotBeNull()
+        country.id.shouldNotBeNull()
+    }
 }

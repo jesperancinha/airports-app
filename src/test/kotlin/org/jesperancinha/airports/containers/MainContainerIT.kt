@@ -1,24 +1,21 @@
 package org.jesperancinha.airports.containers
 
-import org.apache.camel.test.spring.CamelSpringDelegatingTestContextLoader
-import org.apache.camel.test.spring.CamelSpringJUnit4ClassRunner
-import org.apache.camel.test.spring.CamelTestContextBootstrapper
-import org.hamcrest.Matchers
+import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldNotBeNull
+import org.apache.camel.test.spring.junit5.CamelSpringBootTest
 import org.jesperancinha.airports.pojos.Airport
-import org.junit.Assert
-import org.junit.Test
-import org.junit.runner.RunWith
+import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration
+import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.annotation.DirtiesContext
-import org.springframework.test.context.BootstrapWith
-import org.springframework.test.context.ContextConfiguration
 
 /**
  * Created by joaofilipesabinoesperancinha on 08-08-16.
  */
-@RunWith(CamelSpringJUnit4ClassRunner::class)
-@BootstrapWith(CamelTestContextBootstrapper::class)
-@ContextConfiguration(classes = [MainContainerService::class], loader = CamelSpringDelegatingTestContextLoader::class)
+@CamelSpringBootTest
+@EnableAutoConfiguration
+@SpringBootTest
 @DirtiesContext
 class MainContainerIT @Autowired constructor(
     val mainContainerService: MainContainerService
@@ -28,16 +25,10 @@ class MainContainerIT @Autowired constructor(
     fun `should run main test container`() {
         val airports: List<Airport> = mainContainerService.fullAiportInfo
         val airport = airports[0]
-        Assert.assertThat(airports, Matchers.hasSize(46506))
-        Assert.assertThat(airport.id, Matchers.notNullValue())
-        Assert.assertThat(airport.country, Matchers.notNullValue())
-    } //    @Configuration
-    //    public static class ContextConfig extends SingleRouteCamelConfiguration {
-    //
-    //        @Bean(ref = "")
-    //        @Override
-    //        public RouteBuilder route() {
-    //            return new QueryRestRouteBuilder();
-    //        }
-    //    }
+
+        airports.shouldHaveSize(46506)
+        airport.shouldNotBeNull()
+        airport.id.shouldNotBeNull()
+        airport.country.shouldNotBeNull()
+    }
 }

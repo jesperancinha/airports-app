@@ -1,40 +1,32 @@
 package org.jesperancinha.airports
 
-import org.apache.camel.test.spring.CamelSpringDelegatingTestContextLoader
-import org.apache.camel.test.spring.CamelSpringJUnit4ClassRunner
-import org.apache.camel.test.spring.CamelTestContextBootstrapper
+import io.kotest.matchers.nulls.shouldNotBeNull
+import org.apache.camel.test.spring.junit5.CamelSpringBootTest
 import org.jesperancinha.airports.pojos.Airport
 import org.jesperancinha.airports.services.QueryAirportService
-import org.junit.Assert
-import org.junit.Test
-import org.junit.runner.RunWith
+import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration
+import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.annotation.DirtiesContext
-import org.springframework.test.context.BootstrapWith
-import org.springframework.test.context.ContextConfiguration
 
-@RunWith(CamelSpringJUnit4ClassRunner::class)
-@BootstrapWith(CamelTestContextBootstrapper::class)
-@ContextConfiguration(
-    loader = CamelSpringDelegatingTestContextLoader::class
-)
+@CamelSpringBootTest
+@EnableAutoConfiguration
+@SpringBootTest
 @DirtiesContext
-class QueryAirportServiceIT(
-    @Autowired
+class QueryAirportServiceIT @Autowired constructor(
     val queryAirportService: QueryAirportService
 ) {
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val airportsByCountryName: Unit
-        get() {
-            val airports: List<Airport> = queryAirportService.getAirportsByCountryName("Portugal")
-            Assert.assertNotNull(queryAirportService)
-            Assert.assertNotNull(airports)
-        }
+    @Test
+    fun `should get airports by name`() {
+        queryAirportService.shouldNotBeNull()
+        val airports: List<Airport> = queryAirportService.getAirportsByCountryName("Portugal")
+        airports.shouldNotBeNull()
+    }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val airportsByCountryCode: Unit
-        get() {}
+    @Test
+    fun `should get airports by country code`() {
+
+    }
 }

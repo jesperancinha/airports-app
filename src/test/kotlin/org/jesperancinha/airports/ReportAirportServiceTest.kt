@@ -1,44 +1,43 @@
 package org.jesperancinha.airports
 
-import org.apache.camel.test.spring.CamelSpringDelegatingTestContextLoader
-import org.apache.camel.test.spring.CamelSpringJUnit4ClassRunner
-import org.apache.camel.test.spring.CamelTestContextBootstrapper
+import io.kotest.matchers.maps.shouldHaveSize
+import org.apache.camel.test.spring.junit5.CamelSpringBootTest
 import org.jesperancinha.airports.services.ReportAirportService
-import org.junit.Ignore
-import org.junit.Test
-import org.junit.runner.RunWith
+import org.junit.jupiter.api.Disabled
+import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration
+import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.annotation.DirtiesContext
-import org.springframework.test.context.BootstrapWith
-import org.springframework.test.context.ContextConfiguration
 
 /**
  * Created by joaofilipesabinoesperancinha on 08-08-16.
  */
-@RunWith(CamelSpringJUnit4ClassRunner::class)
-@BootstrapWith(CamelTestContextBootstrapper::class)
-@ContextConfiguration(
-    loader = CamelSpringDelegatingTestContextLoader::class
-)
+@CamelSpringBootTest
+@EnableAutoConfiguration
+@SpringBootTest
 @DirtiesContext
-@Ignore
+@Disabled
 class ReportAirportServiceTest(
     @Autowired
     val reportAirportService: ReportAirportService
 
 ) {
 
-    @get:Test
-    val countriesWithHighestNumberOfAirports: Unit
-        get() {
-            val topTen: Map<String, Long> = reportAirportService.getCountriesWithHighestNumberOfAirports(10)
-        }
+    @Test
+    fun `should get countries with the highest number of airports`() {
+        val topTen: Map<String, Long> = reportAirportService.getCountriesWithHighestNumberOfAirports(10)
 
-    @get:Test
-    val countriesWithLowesNumberOfAirports: Unit
-        get() {}
+        topTen.shouldHaveSize(10)
+    }
 
-    @get:Test
-    val runwaysMostCommonlyIdentified: Unit
-        get() {}
+    @Test
+    fun `should get countries with the lowest number of airports`() {
+
+    }
+
+    @Test
+    fun `should get runways most commmonly identifies`() {
+
+    }
 }

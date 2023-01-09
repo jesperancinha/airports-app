@@ -4,25 +4,21 @@ import org.jesperancinha.airports.pojos.Airport
 import org.jesperancinha.airports.pojos.Country
 import org.jesperancinha.airports.pojos.Runway
 import org.springframework.stereotype.Service
-import java.util.stream.Collectors
 
 /**
  * Created by joaofilipesabinoesperancinha on 08-08-16.
  */
 @Service
 class MainContainerService(
-    var fullAiportInfo: List<Airport>
-){
-    private val airportContainer: AirportContainer = AirportContainer()
-    private val countryContainer: CountryContainer = CountryContainer()
-    private val runwayContainer: RunwayContainer = RunwayContainer()
-    init {
-        val airports = airportContainer.airports
-        val countries = countryContainer.countries
-        val runways = runwayContainer.runways
-        fullAiportInfo = getFullAirportInfo(airports, countries, runways)
+) {
+    private val airportContainer: AirportContainer by lazy { AirportContainer() }
+    private val countryContainer: CountryContainer by lazy { CountryContainer() }
+    private val runwayContainer: RunwayContainer by lazy { RunwayContainer() }
+    private val airports = airportContainer.airports
+    private val countries = countryContainer.countries
+    private val runways = runwayContainer.runways
+    val fullAiportInfo by lazy { getFullAirportInfo(airports, countries, runways) }
 
-    }
 
     private fun getFullAirportInfo(
         airports: List<Airport>,

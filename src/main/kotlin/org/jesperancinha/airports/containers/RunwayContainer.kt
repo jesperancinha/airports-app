@@ -11,37 +11,37 @@ import java.io.InputStreamReader
  */
 @Component
 class RunwayContainer {
-    private val mapper = CsvMapper()
-    private val schema = CsvSchema.builder()
-        .addColumn("id")
-        .addColumn("airportRef")
-        .addColumn("airportIdent")
-        .addColumn("lengthFt")
-        .addColumn("widthFt")
-        .addColumn("surface")
-        .addColumn("lighted")
-        .addColumn("closed")
-        .addColumn("leIdent")
-        .addColumn("leLatitudeDeg")
-        .addColumn("leLongitudeDeg")
-        .addColumn("leElevationFt")
-        .addColumn("leHeadingDegT")
-        .addColumn("leDisplacedThresholdFt")
-        .addColumn("heIdent")
-        .addColumn("heLatitudeDeg")
-        .addColumn("heLongitudeDeg")
-        .addColumn("heElevationFt")
-        .addColumn("heHeadingDegT")
-        .addColumn("heDisplacedThresholdFt")
-        .build()
-    var runways: List<Runway> = ArrayList()
-
-    init {
+    private val mapper by lazy { CsvMapper() }
+    private val schema by lazy {
+        CsvSchema.builder()
+            .addColumn("id")
+            .addColumn("airportRef")
+            .addColumn("airportIdent")
+            .addColumn("lengthFt")
+            .addColumn("widthFt")
+            .addColumn("surface")
+            .addColumn("lighted")
+            .addColumn("closed")
+            .addColumn("leIdent")
+            .addColumn("leLatitudeDeg")
+            .addColumn("leLongitudeDeg")
+            .addColumn("leElevationFt")
+            .addColumn("leHeadingDegT")
+            .addColumn("leDisplacedThresholdFt")
+            .addColumn("heIdent")
+            .addColumn("heLatitudeDeg")
+            .addColumn("heLongitudeDeg")
+            .addColumn("heElevationFt")
+            .addColumn("heHeadingDegT")
+            .addColumn("heDisplacedThresholdFt")
+            .build()
+    }
+    val runways: List<Runway> by lazy {
         val aiportStream = javaClass.getResourceAsStream("/runways.csv")
         val it = mapper
             .reader(Runway::class.java)
             .with(schema)
             .readValues<Runway>(InputStreamReader(aiportStream))
-        runways = it.readAll()
+        it.readAll()
     }
 }
