@@ -25,7 +25,7 @@ import org.apache.camel.model.rest.RestBindingMode;
 public class ReportRestRouteBuilder extends RouteBuilder {
 
     @Override
-    public void configure() throws Exception {
+    public void configure() {
         restConfiguration().component("servlet").bindingMode(RestBindingMode.json)
                 .dataFormatProperty("prettyPrint", "true")
                 .contextPath("jesperancinha-airports/rest").port(8080);

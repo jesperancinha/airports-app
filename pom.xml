@@ -16,7 +16,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <camel.version>3.14.7</camel.version>
+        <camel.version>3.19.0</camel.version>
         <junit.version>4.13.2</junit.version>
         <spring.version>6.0.3</spring.version>
         <commons-csv.version>1.4</commons-csv.version>
@@ -34,6 +34,7 @@
         <omni-coveragereporter-maven-plugin.version>0.3.1</omni-coveragereporter-maven-plugin.version>
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <spring-boot.version>3.0.1</spring-boot.version>
+        <camel-spring-javaconfig.version>3.14.4</camel-spring-javaconfig.version>
     </properties>
 
     <dependencyManagement>
@@ -81,7 +82,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-spring-javaconfig</artifactId>
-            <version>${camel.version}</version>
+            <version>${camel-spring-javaconfig.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>

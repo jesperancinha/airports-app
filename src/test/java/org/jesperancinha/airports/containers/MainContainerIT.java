@@ -1,11 +1,11 @@
 package org.jesperancinha.airports.containers;
 
+import org.apache.camel.spring.javaconfig.SingleRouteCamelConfiguration;
 import org.jesperancinha.airports.configuration.AirportsAppConfiguration;
 import org.jesperancinha.airports.pojos.Airport;
 import org.jesperancinha.airports.resources.query.QueryRestRouteBuilder;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.language.bean.Bean;
-import org.apache.camel.spring.javaconfig.SingleRouteCamelConfiguration;
 import org.apache.camel.test.spring.CamelSpringDelegatingTestContextLoader;
 import org.apache.camel.test.spring.CamelSpringJUnit4ClassRunner;
 import org.apache.camel.test.spring.CamelTestContextBootstrapper;
