@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,31 +35,25 @@ public class MainContainerServiceImpl {
         List<Country> countries = countryContainer.getCountries();
         List<Runway> runways = runwayContainer.getRunways();
 
-        airports.sort((o1, o2) -> o1.getIsoCountry().compareTo(o2.getIsoCountry()));
-        countries.sort((o1, o2) -> o1.getCode().compareTo(o2.getCode()));
+        airports.sort(Comparator.comparing(Airport::getIsoCountry));
+        countries.sort(Comparator.comparing(Country::getCode));
 
         fullAiportInfo = airports
                 .parallelStream()
-                .map(airport -> {
-                    airport
-                            .setCountry(countries.stream()
-                                    .filter(country -> country.getCode().equals(airport.getIsoCountry()))
-                                    .findFirst()
-                                    .orElse(null));
-                    return airport;
-                })
+                .peek(airport -> airport
+                        .setCountry(countries.stream()
+                                .filter(country -> country.getCode().equals(airport.getIsoCountry()))
+                                .findFirst()
+                                .orElse(null)))
                 .collect(Collectors.toList());
 
         fullAiportInfo = airports
                 .parallelStream()
-                .map(airport -> {
-                    airport
-                            .addRunWay(runways.stream()
-                                    .filter(runway -> runway.getAirportIdent().equals(airport.getIdent()))
-                                    .findFirst()
-                                    .orElse(null));
-                    return airport;
-                })
+                .peek(airport -> airport
+                        .addRunWay(runways.stream()
+                                .filter(runway -> runway.getAirportIdent().equals(airport.getIdent()))
+                                .findFirst()
+                                .orElse(null)))
                 .collect(Collectors.toList());
     }
 }

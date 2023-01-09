@@ -3,17 +3,16 @@ package org.jesperancinha.airports.resources.query;
 import org.apache.camel.BeanInject;
 import org.jesperancinha.airports.services.QueryAirportService;
 import org.springframework.context.annotation.DependsOn;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
 /**
  * Created by joaofilipesabinoesperancinha on 31-07-16.
  */
-@Component
+@Service
 @DependsOn(value = "queryAirportService")
 public class QueryService {
-
     @BeanInject
     QueryAirportService queryAirportService;
 

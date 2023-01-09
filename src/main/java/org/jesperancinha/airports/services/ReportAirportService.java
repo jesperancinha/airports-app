@@ -16,8 +16,7 @@ import java.util.stream.Collectors;
  * Created by joaofilipesabinoesperancinha on 01-08-16.
  */
 
-@Component
-@Service(value = "reportAirportService")
+@Service
 public class ReportAirportService {
 
     @BeanInject
