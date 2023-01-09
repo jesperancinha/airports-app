@@ -3,7 +3,7 @@
 ---
 
 [![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//bitbucket.org/jesperancinha/airports-app/src/master/)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Airports%20App%20🛬&color=informational)](https://bitbucket.org/jesperancinha/airports-app/src/master/)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airports%20App%20🛬&color=informational)](https://github.com/jesperancinha/airports-app)
 
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 
@@ -15,6 +15,10 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/1ee4811287244931b6e721626f58b460)](https://www.codacy.com/bb/jesperancinha/airports-app/dashboard?utm_source=jesperancinha@bitbucket.org&utm_medium=referral&utm_content=jesperancinha/airports-app&utm_campaign=Badge_Coverage)
 [![Coverage Status](https://coveralls.io/repos/bitbucket/jesperancinha/airports-app/badge.svg?branch=master)](https://coveralls.io/bitbucket/jesperancinha/airports-app?branch=master)
 [![codecov](https://codecov.io/bb/jesperancinha/airports-app/branch/master/graph/badge.svg?token=J0OU3P13PO)](https://codecov.io/bb/jesperancinha/airports-app)
+
+[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/airports-app.svg)](#)
+[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/airports-app.svg)](#)
+[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/airports-app.svg)](#)
 
 ---
 
