@@ -20,7 +20,7 @@
         <junit.version>4.13.2</junit.version>
         <spring.version>6.0.3</spring.version>
         <commons-csv.version>1.4</commons-csv.version>
-        <jackson-dataformat-csv.version>2.14.1</jackson-dataformat-csv.version>
+        <jackson-dataformat-csv.version>2.14.2</jackson-dataformat-csv.version>
         <camel-test-spring.version>3.20.1</camel-test-spring.version>
         <servlet-api.version>2.4-20040521</servlet-api.version>
         <jakarta.xml.bind-api.version>4.0.0</jakarta.xml.bind-api.version>
