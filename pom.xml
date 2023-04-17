@@ -35,7 +35,7 @@
         <camel-spring-javaconfig.version>3.14.4</camel-spring-javaconfig.version>
         <camel-spring-boot-bom.version>3.20.3</camel-spring-boot-bom.version>
         <kotlin.version>1.8.20</kotlin.version>
-        <kotest.version>5.5.5</kotest.version>
+        <kotest.version>5.6.0</kotest.version>
     </properties>
 
     <dependencyManagement>
