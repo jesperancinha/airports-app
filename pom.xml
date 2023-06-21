@@ -35,7 +35,7 @@
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <spring-boot.version>3.1.0</spring-boot.version>
         <camel-spring-javaconfig.version>3.14.4</camel-spring-javaconfig.version>
-        <camel-spring-boot-bom.version>3.20.5</camel-spring-boot-bom.version>
+        <camel-spring-boot-bom.version>3.20.6</camel-spring-boot-bom.version>
         <kotlin.version>1.8.22</kotlin.version>
         <kotest.version>5.6.2</kotest.version>
     </properties>
