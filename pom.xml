@@ -16,14 +16,14 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <camel.version>3.19.0</camel.version>
+        <kotlin.version>1.9.0</kotlin.version>
+        <kotest.version>5.6.2</kotest.version>
+
         <junit.version>4.13.2</junit.version>
-        <spring.version>6.0.3</spring.version>
         <commons-csv.version>1.4</commons-csv.version>
         <jackson.version>2.15.0</jackson.version>
         <jackson-dataformat-csv.version>2.15.2</jackson-dataformat-csv.version>
         <jackson-core.version>2.15.2</jackson-core.version>
-        <camel-test-spring.version>3.20.1</camel-test-spring.version>
         <servlet-api.version>2.4-20040521</servlet-api.version>
         <jakarta.xml.bind-api.version>4.0.0</jakarta.xml.bind-api.version>
         <jaxb-runtime.version>4.0.1</jaxb-runtime.version>
@@ -33,11 +33,13 @@
         <jacoco-maven-plugin.version>0.8.10</jacoco-maven-plugin.version>
         <omni-coveragereporter-maven-plugin.version>0.4.3</omni-coveragereporter-maven-plugin.version>
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
+
         <spring-boot.version>3.1.2</spring-boot.version>
+
         <camel-spring-javaconfig.version>3.14.4</camel-spring-javaconfig.version>
+        <camel-swagger-java-starter.version>3.21.0</camel-swagger-java-starter.version>
         <camel-spring-boot-bom.version>4.0.0</camel-spring-boot-bom.version>
-        <kotlin.version>1.9.0</kotlin.version>
-        <kotest.version>5.6.2</kotest.version>
+        <camel.version>3.19.0</camel.version>
     </properties>
 
     <dependencyManagement>
@@ -55,6 +57,11 @@
                 <version>${camel-spring-boot-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel.springboot</groupId>
+                <artifactId>camel-swagger-java-starter</artifactId>
+                <version>${camel-swagger-java-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
