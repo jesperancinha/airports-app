@@ -37,7 +37,7 @@
         <spring-boot.version>3.1.4</spring-boot.version>
 
         <camel-spring-javaconfig.version>3.14.4</camel-spring-javaconfig.version>
-        <camel-swagger-java-starter.version>3.21.0</camel-swagger-java-starter.version>
+        <camel-swagger-java-starter.version>3.21.1</camel-swagger-java-starter.version>
         <camel-spring-boot-bom.version>4.0.1</camel-spring-boot-bom.version>
         <camel.version>3.19.0</camel.version>
     </properties>
