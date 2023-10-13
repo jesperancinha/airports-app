@@ -23,7 +23,7 @@
         <commons-csv.version>1.4</commons-csv.version>
         <jackson.version>2.15.0</jackson.version>
         <jackson-dataformat-csv.version>2.15.2</jackson-dataformat-csv.version>
-        <jackson-core.version>2.15.2</jackson-core.version>
+        <jackson-core.version>2.15.3</jackson-core.version>
         <servlet-api.version>2.4-20040521</servlet-api.version>
         <jakarta.xml.bind-api.version>4.0.0</jakarta.xml.bind-api.version>
         <jaxb-runtime.version>4.0.1</jaxb-runtime.version>
