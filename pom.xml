@@ -34,7 +34,7 @@
         <omni-coveragereporter-maven-plugin.version>0.4.3</omni-coveragereporter-maven-plugin.version>
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
 
-        <spring-boot.version>3.2.5</spring-boot.version>
+        <spring-boot.version>3.2.6</spring-boot.version>
 
         <camel-spring-javaconfig.version>3.14.4</camel-spring-javaconfig.version>
         <camel-swagger-java-starter.version>3.22.2</camel-swagger-java-starter.version>
