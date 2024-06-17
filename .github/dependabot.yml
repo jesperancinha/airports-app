@@ -15,8 +15,3 @@ updates:
       kotlin:
         patterns:
           - "*kotlin*"
-
-  - package-ecosystem: npm
-    directory: "/"
-    schedule:
-      interval: "daily"
