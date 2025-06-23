@@ -19,7 +19,6 @@
         <kotlin.version>2.2.0</kotlin.version>
         <kotest.version>5.9.1</kotest.version>
 
-        <junit.version>4.13.2</junit.version>
         <commons-csv.version>1.4</commons-csv.version>
         <jackson.version>2.15.0</jackson.version>
         <jackson-dataformat-csv.version>2.19.1</jackson-dataformat-csv.version>
